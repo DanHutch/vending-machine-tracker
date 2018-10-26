@@ -7,7 +7,7 @@ describe 'When a user visits a snack show page' do
     dons  = owner.machines.create(location: "Don's Mixed Drinks")
     mikes  = owner.machines.create(location: "Mike's Bar")
     sams  = owner.machines.create(location: "Sam's Pub")
-    chips = Snack.create(name: "chips", price: 1.50, machines: [dons, mikes, sams])
+    chips = Snack.create(name: "chips", price: 1.55, machines: [dons, mikes, sams])
 
     visit snack_path(chips)
 
@@ -16,7 +16,7 @@ describe 'When a user visits a snack show page' do
     expect(page).to have_content(dons.location)
     expect(page).to have_content(mikes.location)
     expect(page).to have_content(sams.location)
-
+save_and_open_page
 
   end
 end
