@@ -16,7 +16,6 @@ describe 'When a user visits a snack show page' do
     expect(page).to have_content(dons.location)
     expect(page).to have_content(mikes.location)
     expect(page).to have_content(sams.location)
-save_and_open_page
 
   end
 end
